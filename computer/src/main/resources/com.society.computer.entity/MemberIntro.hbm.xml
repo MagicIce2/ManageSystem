@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.society.computer.entity.MemberIntro" table="staff">
+        <id name="staffId" type="java.lang.Long">
+            <column name="staff_id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="staffPicture" column="staff_picture"/>
+        <property name="staffName" column="staff_name"/>
+        <property name="staffDepart" column="staff_depart"/>
+        <property name="staffProfession" column="staff_profession"/>
+        <property name="staffClass" column="staff_class"/>
+        <property name="staffDuty" column="staff_duty"/>
+        <property name="staffIntroduce" column="staff_introduce"/>
+        <property name="staffMotto" column="staff_motto"/>
+        <property name="del" column="del"/>
+    </class>
+</hibernate-mapping>

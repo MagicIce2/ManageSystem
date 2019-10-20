@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.action.excludePattern" value="/static/.*?" />
+    <constant name="struts.i18n.encoding" value="utf-8"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+
+    <package name="api" namespace="/api" extends="struts-default" >
+        <action name="*" class="com.cpjit.swagger4j.support.struts2.ApiAction" method="{0}">
+        </action>
+    </package>
+
+    <!--<package name="interceptor" namespace="/jsp" extends="struts-default">-->
+        <!--<interceptors>-->
+            <!--<interceptor name="token" class="com.society.computer.interceptor.PrivilegeInterceptor"></interceptor>-->
+            <!--<interceptor-stack name="myStack">-->
+                <!--<interceptor-ref name="token"></interceptor-ref>-->
+                <!--<interceptor-ref name="defaultStack"></interceptor-ref>-->
+            <!--</interceptor-stack>-->
+        <!--</interceptors>-->
+        <!--<global-results>-->
+            <!--<result name="login">/WEB-INF/jsp/login.jsp</result>-->
+        <!--</global-results>-->
+    <!--</package>-->
+</struts>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="dialect">
+            org.hibernate.dialect.MySQLDialect
+            <!--com.society.computer.config.LyMySQLDialect-->
+        </property>
+
+		<property name="show_sql">false</property>
+		<property name="format_sql">false</property>
+		<property name="hbm2ddl.auto">update</property>
+		<!-- 懒加载，配合web.xml中配置的 openSessionInViewFilter -->
+		<property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <!--校验模式  JPA  java persistent api-->
+		<!--<property name="javax.persistence.validation.mode">none</property>-->
+		<!--  加载映射文件-->
+        <mapping resource="com.society.computer.entity/Member.hbm.xml"/>
+        <mapping class="com.society.computer.entity.Member"/>
+        <mapping resource="com.society.computer.entity/MemberIntro.hbm.xml"/>
+        <mapping class="com.society.computer.entity.MemberIntro"/>
+        <mapping resource="com.society.computer.entity/IndexInfo.hbm.xml"/>
+        <mapping class="com.society.computer.entity.IndexInfo"/>
+        <mapping resource="com.society.computer.entity/StudentSign.hbm.xml"/>
+        <mapping class="com.society.computer.entity.StudentSign"/>
+        <mapping resource="com.society.computer.entity/Resource.hbm.xml"/>
+        <mapping class="com.society.computer.entity.Resource"/>
+        <mapping resource="com.society.computer.entity/Department.hbm.xml"/>
+        <mapping class="com.society.computer.entity.Department"/>
+        <mapping resource="com.society.computer.entity/Duty.hbm.xml"/>
+        <mapping class="com.society.computer.entity.Duty"/>
+        <mapping resource="com.society.computer.entity/FileCourse.hbm.xml"/>
+        <mapping class="com.society.computer.entity.FileCourse"/>
+        <mapping resource="com.society.computer.entity/Grade.hbm.xml"/>
+        <mapping class="com.society.computer.entity.Grade"/>
+	
+	</session-factory>
+</hibernate-configuration>

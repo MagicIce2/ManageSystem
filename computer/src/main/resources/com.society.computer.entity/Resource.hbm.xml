@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.society.computer.entity.Resource" table="resource">
+        <id name="id" type="java.lang.Long">
+            <column name="resource_id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="title" column="resource_title"/>
+        <property name="link" column="resource_link"/>
+        <property name="pass" column="resource_pass"/>
+        <property name="date" column="resource_date"/>
+        <property name="del" column="del"/>
+    </class>
+</hibernate-mapping>

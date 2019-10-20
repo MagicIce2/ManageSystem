@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="ComSign">
+    <output-path>$PROJECT_DIR$/out/artifacts/ComSign</output-path>
+    <root id="archive" name="ComSign.war">
+      <element id="artifact" artifact-name="Sign:war exploded" />
+    </root>
+  </artifact>
+</component>
