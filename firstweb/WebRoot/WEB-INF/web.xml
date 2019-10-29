@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>Userservlet</servlet-name><!--servlet的别名，随便取  -->
+        <!--servlet的包路径，后面再加上.servlet类名 ，这里的类名必须是包下面的servlet类名，目的是让找到该servlet的路径 -->
+        <servlet-class>com.servlet.Userservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Userservlet</servlet-name><!--servlet的别名，和上面保持一致就行  -->
+        <!--jsp跳转到servlet的路径名，自己取，用来从jsp界面跳转到servlet的路径，程序会根据路径找到servlet的位置  -->
+        <url-pattern>/Servlet/Userservlet</url-pattern><!--  -->
+    </servlet-mapping>
+    <welcome-file-list>
+    	<welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
